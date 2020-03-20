@@ -1,0 +1,38 @@
+using UnityEngine;
+using System.Collections;
+
+public class character : MonoBehaviour
+{
+  [SerializeField]
+  KeyCode select1
+  [SerializeField]
+  KeyCode select2;
+  [SerializeField]
+  KeyCode select3;
+  
+  public GameObject selectionLight1;
+  public GameObject selectionLight2;
+  public GameObject selectionLight3;
+
+  void Start()
+    {
+      selectionLight1.SetActive (false);
+      selectionLight2.SetActive (false);
+      selectionLight3.SetActive (false);
+    }
+
+  void Update()
+  {
+    if (Input.GetKeyDown("KeyCode.select1"))
+        {
+            selectionLight1.SetActive (true);
+        }
+    if (Input.GetKeyDown("KeyCode.select2"))
+        {
+            selectionLight2.SetActive (true);
+        }
+   if (Input.GetKeyDown("KeyCode.select3"))
+        {
+            selectionLight3.SetActive (true);
+        }
+}
